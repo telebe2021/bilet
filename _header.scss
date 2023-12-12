@@ -1,0 +1,49 @@
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://preview.colorlib.com/theme/security/img/header-bg.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+   margin: 100px;
+    .tex{
+        width: 70%;
+        height: 400px;
+     padding: 0px 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     color: white;
+     .btn {
+        width: 30%;
+        background-color: #fab700;
+        line-height: 42px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        font-weight: 500;
+        border: 1px solid transparent;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: relative;
+    }
+}
+}
+@media screen and (max-width:768px) {
+    header{
+        .tex{
+             h1, p{
+                width: 100%;
+            }
+            a{
+                width: 40%;
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@ p {
   letter-spacing: 2px;
 }
 
-.con {
+.container {
   max-width: 1200px;
   margin: auto;
   padding: 0 32px;
@@ -32,11 +32,13 @@ p {
 nav {
   width: 100%;
   height: 80px;
-  background-color: cadetblue;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: fixed;
   align-items: center;
+  z-index: 11111111;
+  border: 2px solid black;
 }
 nav .nav1 {
   padding: 0 20px;
@@ -75,6 +77,11 @@ nav .nav2 .text ul {
   gap: 40px;
 }
 
+@media screen and (max-width: 768px) {
+  nav .nav1 .number {
+    display: none;
+  }
+}
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://preview.colorlib.com/theme/security/img/header-bg.jpg.webp");
   background-repeat: no-repeat;
@@ -82,6 +89,7 @@ header {
   padding-top: 80px;
   display: flex;
   justify-content: center;
+  margin: 100px;
 }
 header .tex {
   width: 70%;
@@ -109,6 +117,14 @@ header .tex .btn {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  header .tex h1, header .tex p {
+    width: 100%;
+  }
+  header .tex a {
+    width: 40%;
+  }
+}
 .sec1 {
   width: 100%;
   height: 600px;
@@ -128,8 +144,222 @@ header .tex .btn {
   display: flex;
   justify-content: space-between;
 }
+.sec1 .uclu:hover {
+  background-color: orange;
+  box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
 .sec1 .uclu .sec11 {
   width: 32%;
   border-radius: 2px solid black;
   gap: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .sec1 .text1 .uclu div {
+    width: 100%;
+  }
+}
+.sec2 {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f9f9ff;
+}
+.sec2 .sec2a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.sec2 .sec2a .sec2b {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sec2 .sec2a .sec2b p {
+  color: gray;
+  font-weight: 300;
+}
+.sec2 .sec2a .sec2c {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.sec2 .sec2a .sec2c div {
+  flex: 1 1 calc(30% - 50px);
+  padding: 15px;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.sec2 .sec2a .sec2c div h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.sec2 .sec2a .sec2c div p {
+  font-size: 14px;
+  color: gray;
+  margin: 20px 0;
+}
+.sec2 .sec2a .sec2c div:hover {
+  background-color: orange;
+  box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
+  .sec2 .sec2a .sec2c div {
+    flex: 1 1 calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec2 .sec2a .sec2c div {
+    flex: 1 1 calc(100% - 50px);
+  }
+}
+.sec3 {
+  width: 100%;
+  background-color: #f9f9ff;
+  padding: 100px 0;
+}
+.sec3 .sec3a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.sec3 .sec3a .sec3b {
+  text-align: center;
+}
+.sec3 .sec3a .sec3b p {
+  color: gray;
+  margin-top: 50px;
+}
+.sec3 .sec3a .sec3c {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.sec3 .sec3a .sec3c div {
+  flex: 1 1 calc(25% - 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.sec3 .sec3a .sec3c div aside {
+  width: 100%;
+  overflow: hidden;
+}
+.sec3 .sec3a .sec3c div aside img {
+  transition: 0.5s ease;
+  width: 100%;
+  height: auto;
+}
+.sec3 .sec3a .sec3c div h4 {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.sec3 .sec3a .sec3c div span {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.sec3 .sec3a .sec3c div p {
+  color: gray;
+}
+.sec3 .sec3a .sec3c div main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.sec3 .sec3a .sec3c div main h5 {
+  font-weight: 400;
+  color: gray;
+}
+.sec3 .sec3a .sec3c div:hover .hadd img {
+  transform: scale(1.1);
+}
+.sec3 .sec3a .sec3c div:hover h4 {
+  color: orange;
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
+  .sec3 .sec3a .sec3c div {
+    flex: 1 1 calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec3 .sec3a .sec3c div {
+    flex: 1 1 calc(100% - 50px);
+  }
+}
+footer {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #04091e;
+  color: white;
+}
+footer p {
+  color: gray;
+  font-size: 14px;
+}
+footer .footcon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+footer .footcon .bass {
+  padding-left: 200px;
+}
+footer .footcon div {
+  flex: 1 1 calc(30% - 30px);
+}
+footer .footcon div span {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+footer .footcon div span input {
+  width: calc(100% - 40px);
+  padding: 5px;
+}
+footer .footcon div span i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: orange;
+  cursor: pointer;
+}
+footer .footcon div ul i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+footer .footcon div ul i:hover {
+  color: orange;
+}
+
+@media screen and (max-width: 936px) {
+  footer .footcon div {
+    flex: 1 1 calc(50% - 30px);
+  }
+  footer .footcon .bass {
+    margin-top: 50px;
+    padding-left: 0;
+  }
 }/*# sourceMappingURL=index.css.map */
