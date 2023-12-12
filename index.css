@@ -35,7 +35,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: fixed;
   align-items: center;
   z-index: 11111111;
   border: 2px solid black;
@@ -144,20 +143,24 @@ header .tex .btn {
   display: flex;
   justify-content: space-between;
 }
-.sec1 .uclu:hover {
+.sec1 .uclu .sec11 {
+  padding: 25px;
+  width: 32%;
+  border-radius: 2px solid black;
+  gap: 2%;
+}
+.sec1 .uclu .sec11:hover {
   background-color: orange;
   box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
 }
-.sec1 .uclu .sec11 {
-  width: 32%;
-  border-radius: 2px solid black;
-  gap: 2%;
+.sec1 .uclu .sec11 img {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .sec1 .text1 .uclu div {
+  .sec1 .text1 .uclu .sec11 {
     width: 100%;
   }
 }
@@ -256,11 +259,11 @@ header .tex .btn {
   gap: 10px;
   padding: 10px;
 }
-.sec3 .sec3a .sec3c div aside {
+.sec3 .sec3a .sec3c div .hedd {
   width: 100%;
   overflow: hidden;
 }
-.sec3 .sec3a .sec3c div aside img {
+.sec3 .sec3a .sec3c div .hedd img {
   transition: 0.5s ease;
   width: 100%;
   height: auto;
