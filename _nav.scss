@@ -1,24 +1,29 @@
 nav {
     width: 100%;
-    height: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    // position: fixed;
+    position: fixed;
     align-items: center;
     z-index: 11111111;
-    border: 2px solid black;
 
     .nav1 {
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
         width: 100%;
-        height: 20px;
+        border-bottom: 2px solid white;
 
-        .icon {
+        .nav11 {
+            height: 30px;
+            width: 100%;
+            padding: 20px 0;
+            width: 100%;
             display: flex;
-            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon {
+                display: flex;
+                gap: 12px;
+            }
         }
 
         .number {
@@ -28,38 +33,81 @@ nav {
     }
 
     .nav2 {
-        display: flex;
-        justify-content: space-between;
         width: 100%;
-        height: 30px;
-        padding: 0 20px;
 
-        img {
-            width: 218px;
-            height: 30px;
-        }
-
-        .text {
+        .nav21 {
             display: flex;
-            gap: 20px;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            img {
+                width: 218px;
+                height: 30px;
+            }
 
-            ul {
-                width: 80%;
-                display: flex;
-                justify-content: space-between;
-                gap: 40px;
+            .text {
+                width: 70%;
+                height: 100%;
 
+                .more {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    list-style: none;
+                    li{
+                        transition: 0.3s ease;
+                        cursor: pointer;
+                        &:hover{
+                            color: orange;
+                        }
+                    }
+
+                    .pages {
+                        position: relative;
+
+                        .bloq {
+                            position: absolute;
+                            background-color: white;
+                            width: 140px;
+                            padding: 16px;
+                            left: 0;
+                            top: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            opacity: 0;
+                            transition: opacity 0.5s ease;
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                font-size: 12px;
+
+                                &:hover {
+                                    color: orange;
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                        }
+                        &:hover .bloq {
+                            z-index: 1111;
+                            opacity: 1;
+
+                        }
+                    }
+                }
             }
         }
     }
 }
+
 @media screen and (max-width: 768px) {
-    nav{
-        .nav1{
-            .number{
+    nav {
+        .nav1 {
+            .number {
                 display: none;
             }
         }
-    
+
     }
 }

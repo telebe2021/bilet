@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="./update.css">
+</head>
+    <body>
+        <div class="update">
+    
+            <form id="uploadForm" style="border: 2px solid black; padding: 5px;">
+                <label for="fileInput">Choose File:</label>
+                <input type="file" id="fileInput" name="file" accept="image/*" required>
+                <br>
+            
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="name" required>
+                <br>
+            
+                <label for="categoryInput">Category:</label>
+                <select id="categoryInput" name="category" required>
+                </select>
+                <br>
+            
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./update.js"></script>
+</body>
+</html>
