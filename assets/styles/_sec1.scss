@@ -17,6 +17,13 @@ text-align: center;
     flex-wrap: wrap;
 display: flex;
 gap: 30px;
+i{
+width: 30px;
+height: 30px;
+background-color:aqua;
+margin-right: 20px;
+margin-top: 20px;
+}
 
     .sec11{
         padding: 25px;
@@ -48,7 +55,15 @@ gap: 30px;
         }
     }
     
-}}
+}
+button{
+    width: 120px;
+    height: 30px;
+    color:#000;
+    background-color: aquamarine;
+    border-radius: 12px;
+}
+}
 }
 @media screen and (max-width:768px) {
     .sec1{

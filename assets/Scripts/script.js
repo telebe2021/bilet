@@ -16,7 +16,7 @@ fetch("http://localhost:3000/card")
         console.log(data);
         data.forEach(card => {
             document.querySelector(".uclu").innerHTML+=`<div class="sec11">
-                    
+            <i class="bi bi-heart"></i>
             <img src="${card.image}" alt="">
             <a href="#"><h4>${card.link}</h4></a>
             <p>${card.text}</p>
@@ -26,7 +26,15 @@ fetch("http://localhost:3000/card")
         
             <a href" ../info.html?id${card.id}<button><i class="bi bi-info-circle-fill"></i> info</button></a>
             </span>
+           
         </div>`
 
     });
 })
+
+function addEventListener(id) {
+    axios.get("http://localhost:3000/boxs/"+id)
+    .then(res=>{
+        axios.post("http://localhost:3000/favorites",res.data)
+    })
+}
