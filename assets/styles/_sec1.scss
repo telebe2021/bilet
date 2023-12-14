@@ -19,8 +19,8 @@ display: flex;
 gap: 30px;
 i{
 width: 30px;
+font-size: 28px;
 height: 30px;
-background-color:aqua;
 margin-right: 20px;
 margin-top: 20px;
 }
@@ -43,6 +43,8 @@ margin-top: 20px;
             width: 100%;
             display: flex;
             justify-content: space-between;
+            gap: 20px;
+
         }
         img{
             width: 100%;
